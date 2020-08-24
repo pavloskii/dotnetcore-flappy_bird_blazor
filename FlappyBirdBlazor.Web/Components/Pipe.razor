@@ -1,0 +1,8 @@
+﻿<div class="pipe" style="@_pipeCss"></div>
+
+@code {
+    [Parameter]
+    public PipeModel Model { get; set; }
+
+    string _pipeCss => $"bottom: {Model.DistanceFromBottom}px; left: {Model.DistanceFromLeft}px";
+}
